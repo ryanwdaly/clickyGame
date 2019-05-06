@@ -1,0 +1,36 @@
+.card {
+  border: 4px rgb(99, 99, 99) solid;
+  border-radius: 2px;
+  height: 400px;
+  width: 400px;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 4px 4px 10px rgb(56, 56, 56);
+  transition: all .2s ease-in-out;
+
+    /* background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+    border: 6px solid white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px; */
+  }
+
+.card > .img-container {
+  height: 100%;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+}
+  
+.card:hover {
+  box-shadow: 8px 8px 20px rgb(56, 56, 56);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card:active{
+  transform: translate(1px, 1px);
+}
+  
