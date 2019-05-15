@@ -7,7 +7,7 @@ import Wrapper from "./components/Wrapper";
 import Row from './Row';
 import Container from './Container';
 import Column from './Column';
-import characters from './characters.json';
+import Characters from './characters.json';
 
 function switchCards(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
@@ -19,13 +19,18 @@ function switchCards(arr) {
 
 class App extends Component {
   state = {
-    characters, 
+    characters: [], 
     currentScore: 0, 
     topScore: 0, 
     rightWrong: "", 
     clicked: []
   };
 
+  componentDidMount = () => {
+    this.setState({
+      characters: Characters
+    });
+  }
   handleClick = id => {
     if(this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
@@ -61,7 +66,7 @@ class App extends Component {
   }
 
   handleSwitch = () => {
-    let switchedCards = switchCards(characters);
+    let switchedCards = switchCards(this.state.characters);
     this.setState({ characters: switchedCards });
   }
 
@@ -81,7 +86,7 @@ class App extends Component {
         <Container>
           <Row>
             {this.state.characters.map(character => (
-              <Column size="md-3 sm-6">
+              <Column key={character.id} size="md-3 sm-6">
                 <Card
                   key={character.id}
                   handleClick={this.handleClick}

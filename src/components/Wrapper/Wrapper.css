@@ -1,0 +1,8 @@
+.wrapper {
+    background: url("https://www.ctvnews.ca/polopoly_fs/1.3502551.1500034194!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}

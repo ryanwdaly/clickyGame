@@ -9,11 +9,11 @@ nav {
 }
 
 a {
-    color: #f0ff4d;
+    font-family: 'Thrones Font';
+    color: whitesmoke;
 }
 
 a:hover {
-    color: #defe3f;
     text-decoration: none;
 }
 
@@ -21,6 +21,14 @@ nav li {
     display: inline-block;
     padding: 26px 0;
     width: 25%;
+    font-family: 'Thrones Font';
+    color: whitesmoke;
+    font-size: 1rem;
+    text-align: center;
+}
+
+nav li a{ 
+    font-size: 2rem;
 }
 
 ul {
